@@ -19,10 +19,10 @@ def remove_duplicate(a):
     if type(a) != str:
         raise TypeError("A must be a string.")
 
-    for index in range(len(a) - 1):
+    for index in range(len(a) - 2):
         if a[index] == a[index + 1]:
-            a = a[index + 1:]
-            a -= 1
+            a = a[:index] = a[index + 1:]
+            index -= 1
 
     return a
 

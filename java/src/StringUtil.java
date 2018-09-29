@@ -1,4 +1,3 @@
-
 public class StringUtil {
     /**
      * Concat two string together.
@@ -17,10 +16,10 @@ public class StringUtil {
      * @return string with no duplicate character
      */
     public static String remove_duplicate(String a) {
-        for (int i = 0; i < a.length(); i++) {
-            if (a.substring(i).equals(a.substring(i + 1))) {
-                a = a.substring(i + 1, a.size() - 1);
-                i -= 1;
+        for (int i = 0; i < a.length()-1; i++) {
+            if (a.charAt(i) == a.charAt(i + 1)) {
+                a = a.substring(0, i) + a.substring(i + 1, a.length());
+                i-=1;
             }
         }
 
